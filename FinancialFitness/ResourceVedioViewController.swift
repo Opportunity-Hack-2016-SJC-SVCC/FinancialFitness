@@ -19,13 +19,10 @@ class ResourceVedioViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.playVideo()
-//        self.playVideo("90lQxO3ARmY")
   }
     
     func playVideo(){
         videoWebView.allowsInlineMediaPlayback = true
-//        let youTubelink: String = "http://www.youtube.com/embed/\(videoId)"
-        
         let videoUrl = resource?.videoUrlString
         let videoId = extractVideoId(videoUrl!)
         let videoUrlEmbedded: String = "http://www.youtube.com/embed/\(videoId)"
@@ -35,11 +32,16 @@ class ResourceVedioViewController: UIViewController {
         
         let Code:String = "<iframe width =\(width) height = \(height) src = \(videoUrlEmbedded) frameborder = \(frame)></iframe>";
         self.videoWebView.loadHTMLString(Code as String, baseURL: nil);
+        
+        videoDescription.text = resource?.resourceName
+        videoDescription.layer.borderWidth = 0.5;
+        videoDescription.layer.borderColor = UIColor.lightGrayColor().CGColor
+        videoDescription.layer.cornerRadius = 15
     }
 
     private func extractVideoId(videoUrl : String) -> String {
         var videoUrlArray = videoUrl.characters.split{$0 == "="}.map(String.init)
-        var videoId: String = videoUrlArray[1]
+        let videoId: String = videoUrlArray[1]
         return videoId
     }
     
