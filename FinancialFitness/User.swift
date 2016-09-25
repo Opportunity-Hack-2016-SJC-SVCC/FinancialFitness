@@ -14,6 +14,8 @@ class User: NSObject {
     var firstName : String?
     var lastName : String?
     var photoUrlString : String?
+    var emailId : String?
+    var phoneNumber : String?
     
     var deleted : Bool?
     var language : String?

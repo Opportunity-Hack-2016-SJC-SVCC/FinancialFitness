@@ -16,6 +16,7 @@
 		759968851D97678E00819396 /* ForceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759968841D97678E00819396 /* ForceClient.swift */; };
 		75C8EBEC1D97918400D148BA /* ResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */; };
 		75C8EBEE1D97AD1200D148BA /* ResourceRelatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBED1D97AD1200D148BA /* ResourceRelatedViewController.swift */; };
+		75C8EBF01D97EEDB00D148BA /* GSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBEF1D97EEDB00D148BA /* GSTextField.swift */; };
 		75CF1C241D976A8C00147415 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C231D976A8C00147415 /* LoginViewController.swift */; };
 		75CF1C261D976AF000147415 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C251D976AF000147415 /* SignUpViewController.swift */; };
 		75CF1C281D976BA600147415 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C271D976BA600147415 /* QuestionViewController.swift */; };
@@ -58,6 +59,7 @@
 		759968841D97678E00819396 /* ForceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceClient.swift; sourceTree = "<group>"; };
 		75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		75C8EBED1D97AD1200D148BA /* ResourceRelatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceRelatedViewController.swift; sourceTree = "<group>"; };
+		75C8EBEF1D97EEDB00D148BA /* GSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSTextField.swift; sourceTree = "<group>"; };
 		75CF1C231D976A8C00147415 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75CF1C251D976AF000147415 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		75CF1C271D976BA600147415 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 		75DC025B1D978BB700D5F00E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				75C8EBEF1D97EEDB00D148BA /* GSTextField.swift */,
 				75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */,
 			);
 			name = View;
@@ -528,6 +531,7 @@
 				75CF1C2C1D9773F100147415 /* ResourceVedioViewController.swift in Sources */,
 				7B81F0C21D97C125004C0994 /* AnswerMapper.swift in Sources */,
 				7B81F0B71D979E33004C0994 /* Answer.swift in Sources */,
+				75C8EBF01D97EEDB00D148BA /* GSTextField.swift in Sources */,
 				75CF1C391D97793100147415 /* ResourceServicesAboutViewController.swift in Sources */,
 				75CF1C3F1D97797200147415 /* ResouceTipsAboutViewController.swift in Sources */,
 				75CF1C311D97748300147415 /* ResourceServicesViewController.swift in Sources */,
