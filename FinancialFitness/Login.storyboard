@@ -63,6 +63,13 @@
                                     <outlet property="delegate" destination="OVe-Gh-bdp" id="L7W-M3-ged"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me1-gP-mWW">
+                                <rect key="frame" x="139" y="506" width="50" height="30"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <segue destination="abd-AS-vSr" kind="push" identifier="SignUpSegue" id="eg0-b3-rZn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -105,7 +112,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UmR-l5-TZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4637" y="-173"/>
+            <point key="canvasLocation" x="-4628" y="-270"/>
+        </scene>
+        <!--SignUpViewController-->
+        <scene sceneID="6K3-QZ-vO8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Signup" referencedIdentifier="SignUpViewController" id="abd-AS-vSr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fh2-kL-f0q"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SI6-Hg-aMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4628" y="75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8e7-bD-u0e">
