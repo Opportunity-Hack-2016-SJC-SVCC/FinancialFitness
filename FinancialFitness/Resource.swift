@@ -11,11 +11,11 @@ import UIKit
 class Resource: NSObject {
 
     var resourceId : String?
-    var resourceType : ResourceType?
+    var resourceType : String?
     var resourceName : String?
     var deleted : Bool?
     
-    var vedioUrlString : String?
+    var videoUrlString : String?
     var goalType : String?
     
     var searchNearbyProviders : Bool?

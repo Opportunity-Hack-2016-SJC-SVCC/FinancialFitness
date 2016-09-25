@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OVe-Gh-bdp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="n4n-lF-c7Q">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -20,13 +20,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="qKy-T5-WwQ">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission-Asset Fund" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E1-M5-pJU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mission-Asset Fund" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E1-M5-pJU">
                                 <rect key="frame" x="20" y="45" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tl5-lC-wCt" customClass="GSTextField" customModule="FinancialFitness" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" tag="20" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tl5-lC-wCt" customClass="GSTextField" customModule="FinancialFitness" customModuleProvider="target">
                                 <rect key="frame" x="64" y="366" width="201" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -34,14 +34,14 @@
                                     <outlet property="delegate" destination="OVe-Gh-bdp" id="T3y-EN-ZP0"/>
                                 </connections>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Login Logo" translatesAutoresizingMaskIntoConstraints="NO" id="RHl-hR-QSS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Login Logo" translatesAutoresizingMaskIntoConstraints="NO" id="RHl-hR-QSS">
                                 <rect key="frame" x="121" y="107" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="mjk-HA-6zv"/>
                                     <constraint firstAttribute="width" constant="80" id="yjg-Ob-hyy"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RC-Ua-8zW">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2RC-Ua-8zW">
                                 <rect key="frame" x="142" y="433" width="38" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="38" id="1nL-39-uCY"/>
@@ -55,7 +55,7 @@
                                     <action selector="login" destination="OVe-Gh-bdp" eventType="touchUpInside" id="RAc-HW-VJu"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMP-wE-nVM" customClass="GSTextField" customModule="FinancialFitness" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TMP-wE-nVM" customClass="GSTextField" customModule="FinancialFitness" customModuleProvider="target">
                                 <rect key="frame" x="64" y="299" width="201" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -63,6 +63,13 @@
                                     <outlet property="delegate" destination="OVe-Gh-bdp" id="L7W-M3-ged"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me1-gP-mWW">
+                                <rect key="frame" x="139" y="506" width="50" height="30"/>
+                                <state key="normal" title="SignUp"/>
+                                <connections>
+                                    <segue destination="abd-AS-vSr" kind="push" identifier="SignUpSegue" id="eg0-b3-rZn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -85,13 +92,53 @@
                             <constraint firstAttribute="trailing" secondItem="7E1-M5-pJU" secondAttribute="trailing" constant="20" id="zTh-gW-orl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Bp3-Tf-omQ"/>
                     <connections>
                         <outlet property="loginField" destination="TMP-wE-nVM" id="nZp-bH-lEE"/>
                         <outlet property="passwordField" destination="Tl5-lC-wCt" id="klP-Jg-eST"/>
                         <outlet property="topLayoutConstraint" destination="MYy-vh-n9z" id="Whu-rw-BSg"/>
+                        <segue destination="dnW-oY-JIU" kind="push" identifier="Login2QuestionSegue" id="d2I-kv-bEo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PDR-a9-uOz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5158" y="-136"/>
+        </scene>
+        <!--QuestionViewController-->
+        <scene sceneID="XHB-2D-cSd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Question" referencedIdentifier="QuestionViewController" id="dnW-oY-JIU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oRR-pa-ef3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UmR-l5-TZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4628" y="-270"/>
+        </scene>
+        <!--SignUpViewController-->
+        <scene sceneID="6K3-QZ-vO8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Signup" referencedIdentifier="SignUpViewController" id="abd-AS-vSr" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fh2-kL-f0q"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SI6-Hg-aMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4628" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8e7-bD-u0e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n4n-lF-c7Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5k1-3n-siD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OVe-Gh-bdp" kind="relationship" relationship="rootViewController" id="Gdb-p7-XS3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cux-M5-heN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5581" y="-136"/>
         </scene>

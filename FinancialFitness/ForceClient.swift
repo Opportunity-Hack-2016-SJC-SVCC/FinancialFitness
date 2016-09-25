@@ -18,6 +18,7 @@ class ForceClient: NSObject {
     var questionMapper : QuestionMapper = QuestionMapper()
     var answerMapper : AnswerMapper = AnswerMapper()
     var answerResourceMapper : AnswerResourceMapper = AnswerResourceMapper()
+    var resourceMapper : ResourceMapper = ResourceMapper()
     
     func createRequest() -> NSMutableURLRequest {
         let request = NSMutableURLRequest()
@@ -123,7 +124,7 @@ class ForceClient: NSObject {
             }
         }
     }
-    
+
     //===================== Login & SignUp =========================
     
     func signUpUserWithparameters(signUpparameters : NSDictionary, completion : (response : AnyObject?, error : NSError?) -> Void) {
@@ -171,13 +172,23 @@ class ForceClient: NSObject {
         
     }
     
-    
-    
-    
-    
-    
-    
-    
+    //===================== Resource =========================
+    func getResourceById(resourceId : String, completion : (resource : Resource?, error : NSError?) -> Void) {
+        let urlString = "https://na35.salesforce.com/services/data/v37.0/sobjects/Fin_Fit_Resource__c/\(resourceId)"
+        let request = createRequest()
+        request.URL = createUrl(urlString)
+        Alamofire.request(request).responseJSON { (response) -> Void in
+            if((response.result.value) != nil) {
+                print(response)
+                if (response.result.isSuccess) {
+                    let responseDictionary = response.result.value as! NSDictionary
+                    completion(resource : self.resourceMapper.toResource(responseDictionary), error : nil)
+                } else {
+                    completion(resource: nil, error: response.result.error)
+                }
+            }
+        }
+    }
 
-
-}
+    
+ }

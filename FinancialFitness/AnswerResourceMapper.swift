@@ -25,7 +25,13 @@ class AnswerResourceMapper: NSObject {
         answerResource.answerResourceName = answerResourceDictionary["Name"] as? String
         answerResource.answerCustomId = answerResourceDictionary["Answer__c"] as? String
         answerResource.resourceCustomId = answerResourceDictionary["Resource__c"] as? String
+        answerResource.resourceType = toResourceType(answerResourceDictionary["Resource__r"] as? NSDictionary)
         return answerResource
     }
 
+    func toResourceType(resourceTypeDictionary : NSDictionary?) -> String {
+        let recordTypeDictionary = resourceTypeDictionary!["RecordType"] as! NSDictionary
+        let recordTypeString = recordTypeDictionary["Name"] as? String
+        return recordTypeString!
+    }
 }

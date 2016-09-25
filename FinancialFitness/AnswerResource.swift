@@ -14,5 +14,5 @@ class AnswerResource: NSObject {
     var answerResourceName : String?
     var answerCustomId : String?
     var resourceCustomId : String?
-    
+    var resourceType : String?
 }

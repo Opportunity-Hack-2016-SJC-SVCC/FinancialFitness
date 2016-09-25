@@ -15,4 +15,5 @@ class Constants: NSObject {
     static let RESOURCE_VEDIO_SEGUE = "ResourceVedioSegue"
     static let RESOURCE_TIPS_SEGUE = "ResourceTipsSegue"
     static let RESOURCE_SERVICES_SEGUE = "ResourceServicesSegue"
+    static let LOGIN_TO_QUESTION_SEGUE = "Login2QuestionSegue"
 }

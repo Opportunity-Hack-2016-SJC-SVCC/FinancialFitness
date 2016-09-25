@@ -77,6 +77,7 @@ class LoginViewController: UIViewController {
         forceClient.validateLogin(userEmail!) { (response, error) in
             let result = response as! String
             print(response)
+            self.performSegueWithIdentifier(Constants.LOGIN_TO_QUESTION_SEGUE, sender: nil)
         }
     }
     
@@ -84,5 +85,11 @@ class LoginViewController: UIViewController {
         textField.resignFirstResponder()
         return true
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let segueIdentifier = segue.identifier
+        if (segueIdentifier == Constants.LOGIN_TO_QUESTION_SEGUE) {
+            let questionViewController = segue.destinationViewController as! QuestionViewController
+        }
+    }
 }
