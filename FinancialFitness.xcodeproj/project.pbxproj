@@ -14,6 +14,7 @@
 		759968771D97669200819396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759968761D97669200819396 /* Assets.xcassets */; };
 		7599687A1D97669200819396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759968781D97669200819396 /* LaunchScreen.storyboard */; };
 		759968851D97678E00819396 /* ForceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759968841D97678E00819396 /* ForceClient.swift */; };
+		75C8EBEC1D97918400D148BA /* ResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */; };
 		75CF1C241D976A8C00147415 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C231D976A8C00147415 /* LoginViewController.swift */; };
 		75CF1C261D976AF000147415 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C251D976AF000147415 /* SignUpViewController.swift */; };
 		75CF1C281D976BA600147415 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C271D976BA600147415 /* QuestionViewController.swift */; };
@@ -47,6 +48,7 @@
 		759968791D97669200819396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7599687B1D97669200819396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759968841D97678E00819396 /* ForceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceClient.swift; sourceTree = "<group>"; };
+		75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		75CF1C231D976A8C00147415 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75CF1C251D976AF000147415 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		75CF1C271D976BA600147415 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		7599686E1D97669200819396 /* FinancialFitness */ = {
 			isa = PBXGroup;
 			children = (
+				75DC025B1D978BB700D5F00E /* View */,
 				7B81F0B01D9781C9004C0994 /* Util */,
 				759968831D9766C300819396 /* Client */,
 				759968821D9766BD00819396 /* Storyboard */,
@@ -231,6 +234,14 @@
 			name = Thankyou;
 			sourceTree = "<group>";
 		};
+		75DC025B1D978BB700D5F00E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		7B81F0B01D9781C9004C0994 /* Util */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,12 +265,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7599687E1D97669200819396 /* Build configuration list for PBXNativeTarget "FinancialFitness" */;
 			buildPhases = (
+				1EDA2982C0D0F610F9270C4A /* 📦 Check Pods Manifest.lock */,
 				C4D2004DAA02E8E1E10E2326 /* [CP] Check Pods Manifest.lock */,
 				759968681D97669200819396 /* Sources */,
 				759968691D97669200819396 /* Frameworks */,
 				7599686A1D97669200819396 /* Resources */,
 				B34DC52D6871630F60DE8E93 /* [CP] Embed Pods Frameworks */,
 				F811856AEACC1342B59F4B7D /* [CP] Copy Pods Resources */,
+				59BA7766C4B9CA3B1562DDCB /* 📦 Embed Pods Frameworks */,
+				2DB0A412E8D812FA18186113 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -324,6 +338,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1EDA2982C0D0F610F9270C4A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2DB0A412E8D812FA18186113 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinancialFitness/Pods-FinancialFitness-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		59BA7766C4B9CA3B1562DDCB /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinancialFitness/Pods-FinancialFitness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B34DC52D6871630F60DE8E93 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C8EBEC1D97918400D148BA /* ResourcesTableViewCell.swift in Sources */,
 				75CF1C3B1D97794300147415 /* ResourceServicesNearViewController.swift in Sources */,
 				75CF1C411D97798400147415 /* ResouceTipsRelatedViewController.swift in Sources */,
 				75CF1C2A1D9773D800147415 /* ResourceViewController.swift in Sources */,
