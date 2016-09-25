@@ -34,6 +34,11 @@
 		7B81F0AD1D978147004C0994 /* ResourceTips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81F0AC1D978147004C0994 /* ResourceTips.storyboard */; };
 		7B81F0AF1D978154004C0994 /* ResourceServices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81F0AE1D978154004C0994 /* ResourceServices.storyboard */; };
 		7B81F0B21D9781DA004C0994 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0B11D9781DA004C0994 /* Constants.swift */; };
+		7B81F0B51D979C9A004C0994 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0B41D979C9A004C0994 /* Question.swift */; };
+		7B81F0B71D979E33004C0994 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0B61D979E33004C0994 /* Answer.swift */; };
+		7B81F0B91D979F0E004C0994 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0B81D979F0E004C0994 /* User.swift */; };
+		7B81F0BB1D979F9D004C0994 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0BA1D979F9D004C0994 /* Resource.swift */; };
+		7B81F0BD1D97A1AE004C0994 /* AnswerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0BC1D97A1AE004C0994 /* AnswerResource.swift */; };
 		FF2A4B9E87FB00337559B5F0 /* Pods_FinancialFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF938667C3ADCE7BF08E07 /* Pods_FinancialFitness.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +73,11 @@
 		7B81F0AC1D978147004C0994 /* ResourceTips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResourceTips.storyboard; sourceTree = "<group>"; };
 		7B81F0AE1D978154004C0994 /* ResourceServices.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResourceServices.storyboard; sourceTree = "<group>"; };
 		7B81F0B11D9781DA004C0994 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7B81F0B41D979C9A004C0994 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		7B81F0B61D979E33004C0994 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		7B81F0B81D979F0E004C0994 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7B81F0BA1D979F9D004C0994 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		7B81F0BC1D97A1AE004C0994 /* AnswerResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerResource.swift; sourceTree = "<group>"; };
 		C2BF938667C3ADCE7BF08E07 /* Pods_FinancialFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancialFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4FFD1B775EB8EC5A911343 /* Pods-FinancialFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialFitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialFitness/Pods-FinancialFitness.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +124,7 @@
 		7599686E1D97669200819396 /* FinancialFitness */ = {
 			isa = PBXGroup;
 			children = (
+				7B81F0B31D979C8F004C0994 /* Model */,
 				75DC025B1D978BB700D5F00E /* View */,
 				7B81F0B01D9781C9004C0994 /* Util */,
 				759968831D9766C300819396 /* Client */,
@@ -250,6 +261,18 @@
 			name = Util;
 			sourceTree = "<group>";
 		};
+		7B81F0B31D979C8F004C0994 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B81F0B41D979C9A004C0994 /* Question.swift */,
+				7B81F0B61D979E33004C0994 /* Answer.swift */,
+				7B81F0B81D979F0E004C0994 /* User.swift */,
+				7B81F0BA1D979F9D004C0994 /* Resource.swift */,
+				7B81F0BC1D97A1AE004C0994 /* AnswerResource.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		FD00CF92BF1A1DC94F820944 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,7 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7599687E1D97669200819396 /* Build configuration list for PBXNativeTarget "FinancialFitness" */;
 			buildPhases = (
-				1EDA2982C0D0F610F9270C4A /* 📦 Check Pods Manifest.lock */,
+				1EDA2982C0D0F610F9270C4A /* [CP] Check Pods Manifest.lock */,
 				C4D2004DAA02E8E1E10E2326 /* [CP] Check Pods Manifest.lock */,
 				759968681D97669200819396 /* Sources */,
 				759968691D97669200819396 /* Frameworks */,
@@ -338,14 +361,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1EDA2982C0D0F610F9270C4A /* 📦 Check Pods Manifest.lock */ = {
+		1EDA2982C0D0F610F9270C4A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,16 +461,21 @@
 				75C8EBEC1D97918400D148BA /* ResourcesTableViewCell.swift in Sources */,
 				75CF1C3B1D97794300147415 /* ResourceServicesNearViewController.swift in Sources */,
 				75CF1C411D97798400147415 /* ResouceTipsRelatedViewController.swift in Sources */,
+				7B81F0B51D979C9A004C0994 /* Question.swift in Sources */,
 				75CF1C2A1D9773D800147415 /* ResourceViewController.swift in Sources */,
+				7B81F0BD1D97A1AE004C0994 /* AnswerResource.swift in Sources */,
 				75CF1C241D976A8C00147415 /* LoginViewController.swift in Sources */,
+				7B81F0BB1D979F9D004C0994 /* Resource.swift in Sources */,
 				759968851D97678E00819396 /* ForceClient.swift in Sources */,
 				75CF1C281D976BA600147415 /* QuestionViewController.swift in Sources */,
+				7B81F0B91D979F0E004C0994 /* User.swift in Sources */,
 				75CF1C2E1D97741C00147415 /* ResourceTipsViewController.swift in Sources */,
 				7B81F0B21D9781DA004C0994 /* Constants.swift in Sources */,
 				75CF1C3D1D97795B00147415 /* ResouceServicesRelatedViewController.swift in Sources */,
 				759968721D97669200819396 /* ViewController.swift in Sources */,
 				759968701D97669200819396 /* AppDelegate.swift in Sources */,
 				75CF1C2C1D9773F100147415 /* ResourceVedioViewController.swift in Sources */,
+				7B81F0B71D979E33004C0994 /* Answer.swift in Sources */,
 				75CF1C391D97793100147415 /* ResourceServicesAboutViewController.swift in Sources */,
 				75CF1C3F1D97797200147415 /* ResouceTipsAboutViewController.swift in Sources */,
 				75CF1C311D97748300147415 /* ResourceServicesViewController.swift in Sources */,
