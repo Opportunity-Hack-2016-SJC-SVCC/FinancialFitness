@@ -27,6 +27,12 @@
 		75CF1C3F1D97797200147415 /* ResouceTipsAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C3E1D97797200147415 /* ResouceTipsAboutViewController.swift */; };
 		75CF1C411D97798400147415 /* ResouceTipsRelatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C401D97798400147415 /* ResouceTipsRelatedViewController.swift */; };
 		7B81F0A51D977DFB004C0994 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81F0A41D977DFB004C0994 /* Login.storyboard */; };
+		7B81F0A71D978066004C0994 /* Question.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81F0A61D978066004C0994 /* Question.storyboard */; };
+		7B81F0A91D978108004C0994 /* Resource.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81F0A81D978108004C0994 /* Resource.storyboard */; };
+		7B81F0AB1D978118004C0994 /* ResourceVedio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81F0AA1D978118004C0994 /* ResourceVedio.storyboard */; };
+		7B81F0AD1D978147004C0994 /* ResourceTips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81F0AC1D978147004C0994 /* ResourceTips.storyboard */; };
+		7B81F0AF1D978154004C0994 /* ResourceServices.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B81F0AE1D978154004C0994 /* ResourceServices.storyboard */; };
+		7B81F0B21D9781DA004C0994 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0B11D9781DA004C0994 /* Constants.swift */; };
 		FF2A4B9E87FB00337559B5F0 /* Pods_FinancialFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF938667C3ADCE7BF08E07 /* Pods_FinancialFitness.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +60,12 @@
 		75CF1C3E1D97797200147415 /* ResouceTipsAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResouceTipsAboutViewController.swift; sourceTree = "<group>"; };
 		75CF1C401D97798400147415 /* ResouceTipsRelatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResouceTipsRelatedViewController.swift; sourceTree = "<group>"; };
 		7B81F0A41D977DFB004C0994 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7B81F0A61D978066004C0994 /* Question.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Question.storyboard; sourceTree = "<group>"; };
+		7B81F0A81D978108004C0994 /* Resource.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Resource.storyboard; sourceTree = "<group>"; };
+		7B81F0AA1D978118004C0994 /* ResourceVedio.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResourceVedio.storyboard; sourceTree = "<group>"; };
+		7B81F0AC1D978147004C0994 /* ResourceTips.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResourceTips.storyboard; sourceTree = "<group>"; };
+		7B81F0AE1D978154004C0994 /* ResourceServices.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ResourceServices.storyboard; sourceTree = "<group>"; };
+		7B81F0B11D9781DA004C0994 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C2BF938667C3ADCE7BF08E07 /* Pods_FinancialFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancialFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4FFD1B775EB8EC5A911343 /* Pods-FinancialFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialFitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialFitness/Pods-FinancialFitness.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +112,7 @@
 		7599686E1D97669200819396 /* FinancialFitness */ = {
 			isa = PBXGroup;
 			children = (
+				7B81F0B01D9781C9004C0994 /* Util */,
 				759968831D9766C300819396 /* Client */,
 				759968821D9766BD00819396 /* Storyboard */,
 				759968811D9766B300819396 /* Controller */,
@@ -130,6 +143,11 @@
 			children = (
 				7510733F1D977DF600E2277F /* Signup.storyboard */,
 				7B81F0A41D977DFB004C0994 /* Login.storyboard */,
+				7B81F0A61D978066004C0994 /* Question.storyboard */,
+				7B81F0A81D978108004C0994 /* Resource.storyboard */,
+				7B81F0AA1D978118004C0994 /* ResourceVedio.storyboard */,
+				7B81F0AC1D978147004C0994 /* ResourceTips.storyboard */,
+				7B81F0AE1D978154004C0994 /* ResourceServices.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -213,6 +231,14 @@
 			name = Thankyou;
 			sourceTree = "<group>";
 		};
+		7B81F0B01D9781C9004C0994 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7B81F0B11D9781DA004C0994 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		FD00CF92BF1A1DC94F820944 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,10 +308,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B81F0AD1D978147004C0994 /* ResourceTips.storyboard in Resources */,
 				7B81F0A51D977DFB004C0994 /* Login.storyboard in Resources */,
+				7B81F0A91D978108004C0994 /* Resource.storyboard in Resources */,
 				7599687A1D97669200819396 /* LaunchScreen.storyboard in Resources */,
+				7B81F0AF1D978154004C0994 /* ResourceServices.storyboard in Resources */,
+				7B81F0A71D978066004C0994 /* Question.storyboard in Resources */,
 				759968771D97669200819396 /* Assets.xcassets in Resources */,
 				751073401D977DF600E2277F /* Signup.storyboard in Resources */,
+				7B81F0AB1D978118004C0994 /* ResourceVedio.storyboard in Resources */,
 				759968751D97669200819396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +383,7 @@
 				759968851D97678E00819396 /* ForceClient.swift in Sources */,
 				75CF1C281D976BA600147415 /* QuestionViewController.swift in Sources */,
 				75CF1C2E1D97741C00147415 /* ResourceTipsViewController.swift in Sources */,
+				7B81F0B21D9781DA004C0994 /* Constants.swift in Sources */,
 				75CF1C3D1D97795B00147415 /* ResouceServicesRelatedViewController.swift in Sources */,
 				759968721D97669200819396 /* ViewController.swift in Sources */,
 				759968701D97669200819396 /* AppDelegate.swift in Sources */,
