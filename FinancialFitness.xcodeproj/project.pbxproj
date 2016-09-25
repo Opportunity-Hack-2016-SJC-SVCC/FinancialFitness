@@ -348,6 +348,7 @@
 				TargetAttributes = {
 					7599686B1D97669200819396 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 8VQP9589X8;
 					};
 				};
 			};
@@ -675,10 +676,13 @@
 			baseConfigurationReference = 10D1E16734AA431F4FCE3E0D /* Pods-FinancialFitness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FinancialFitness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.opportunity.FinancialFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -687,10 +691,13 @@
 			baseConfigurationReference = CB4FFD1B775EB8EC5A911343 /* Pods-FinancialFitness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FinancialFitness/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hackathon.opportunity.FinancialFitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

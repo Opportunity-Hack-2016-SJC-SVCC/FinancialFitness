@@ -25,6 +25,9 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        optionsTableView.layer.borderWidth = 0.5;
+        optionsTableView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        optionsTableView.layer.cornerRadius = 15
         forceClient.getAllQuestions { (questions, error) in
             if error == nil {
             self.questions = questions

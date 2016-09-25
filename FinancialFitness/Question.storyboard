@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Question View Controller-->
+        <!--Question-->
         <scene sceneID="t8J-Hr-cu9">
             <objects>
                 <viewController storyboardIdentifier="QuestionViewController" id="66y-XZ-xVo" customClass="QuestionViewController" customModule="FinancialFitness" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,25 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="awb-Em-Suv">
-                                <rect key="frame" x="20" y="40" width="280" height="151"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="awb-Em-Suv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="137"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <connections>
                                     <outlet property="delegate" destination="66y-XZ-xVo" id="ebJ-Lj-2Mq"/>
                                 </connections>
                             </textView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OTg-aH-4GS">
-                                <rect key="frame" x="20" y="226" width="280" height="204"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OTg-aH-4GS">
+                                <rect key="frame" x="0.0" y="231" width="320" height="253"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuestionOptionCell" id="8tD-pd-YLL">
-                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuestionOptionCell" id="8tD-pd-YLL">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8tD-pd-YLL" id="AEr-M6-4Ng">
-                                            <rect key="frame" x="0.0" y="0.0" width="241" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -45,17 +46,27 @@
                                     <outlet property="delegate" destination="66y-XZ-xVo" id="vh5-nc-Eg2"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxv-sW-K7g">
-                                <rect key="frame" x="144" y="471" width="32" height="30"/>
-                                <state key="normal" title="Next"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxv-sW-K7g">
+                                <rect key="frame" x="136" y="512" width="49" height="30"/>
+                                <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="showNextQuestion:" destination="66y-XZ-xVo" eventType="touchUpInside" id="FsF-rl-ohc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="awb-Em-Suv" firstAttribute="leading" secondItem="fp4-RO-lkL" secondAttribute="leading" id="2Ca-NH-hRg"/>
+                            <constraint firstAttribute="trailing" secondItem="awb-Em-Suv" secondAttribute="trailing" id="U4G-c4-gQm"/>
+                            <constraint firstItem="cxv-sW-K7g" firstAttribute="top" secondItem="OTg-aH-4GS" secondAttribute="bottom" constant="28" id="iKi-Sy-rxl"/>
+                            <constraint firstItem="awb-Em-Suv" firstAttribute="top" secondItem="Pum-zL-Nb8" secondAttribute="bottom" id="pm6-Zs-6Qe"/>
+                            <constraint firstItem="OTg-aH-4GS" firstAttribute="top" secondItem="awb-Em-Suv" secondAttribute="bottom" constant="30" id="qmw-Gg-cqU"/>
+                            <constraint firstItem="cxv-sW-K7g" firstAttribute="centerX" secondItem="fp4-RO-lkL" secondAttribute="centerX" id="sBU-J6-0nj"/>
+                            <constraint firstAttribute="trailing" secondItem="OTg-aH-4GS" secondAttribute="trailing" id="xxW-Eq-FTI"/>
+                            <constraint firstItem="OTg-aH-4GS" firstAttribute="leading" secondItem="fp4-RO-lkL" secondAttribute="leading" id="yMG-hu-gZn"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ZJN-jZ-em5"/>
+                    <navigationItem key="navigationItem" title="Question" id="ZJN-jZ-em5"/>
                     <connections>
                         <outlet property="optionsTableView" destination="OTg-aH-4GS" id="Uun-ML-w1E"/>
                         <outlet property="questionTextView" destination="awb-Em-Suv" id="nHI-1M-kyO"/>
