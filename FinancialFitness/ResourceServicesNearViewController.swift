@@ -10,6 +10,8 @@ import UIKit
 
 class ResourceServicesNearViewController: UIViewController {
 
+    var resource : Resource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -10,6 +10,8 @@ import UIKit
 
 class ResouceTipsRelatedViewController: UIViewController {
 
+    var resource : Resource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -16,6 +16,8 @@ class ResourceTipsViewController: UIViewController {
     var aboutTipResourceViewController : ResouceTipsAboutViewController?
     var resourceTipsRelatedViewController : ResourceRelatedViewController?
 
+    var resource : Resource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tipSegmentedControl.selectedSegmentIndex = 0;

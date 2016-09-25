@@ -13,6 +13,8 @@ class ResouceTipsAboutViewController: UIViewController {
     @IBOutlet var tipDescription : UITextView!
     @IBOutlet var tipNotes : UITextView!
 
+    var resource : Resource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

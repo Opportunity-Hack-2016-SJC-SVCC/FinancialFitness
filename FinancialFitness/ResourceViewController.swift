@@ -12,6 +12,8 @@ class ResourceViewController: UIViewController {
     
     @IBOutlet var resourceTableView : UITableView!
 
+    var answerResources : [AnswerResource]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

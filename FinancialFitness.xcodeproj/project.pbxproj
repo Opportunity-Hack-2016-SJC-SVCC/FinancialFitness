@@ -40,6 +40,8 @@
 		7B81F0B91D979F0E004C0994 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0B81D979F0E004C0994 /* User.swift */; };
 		7B81F0BB1D979F9D004C0994 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0BA1D979F9D004C0994 /* Resource.swift */; };
 		7B81F0BD1D97A1AE004C0994 /* AnswerResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0BC1D97A1AE004C0994 /* AnswerResource.swift */; };
+		7B81F0C01D97B3AF004C0994 /* QuestionMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0BF1D97B3AF004C0994 /* QuestionMapper.swift */; };
+		7B81F0C21D97C125004C0994 /* AnswerMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B81F0C11D97C125004C0994 /* AnswerMapper.swift */; };
 		FF2A4B9E87FB00337559B5F0 /* Pods_FinancialFitness.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2BF938667C3ADCE7BF08E07 /* Pods_FinancialFitness.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +82,8 @@
 		7B81F0B81D979F0E004C0994 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7B81F0BA1D979F9D004C0994 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		7B81F0BC1D97A1AE004C0994 /* AnswerResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerResource.swift; sourceTree = "<group>"; };
+		7B81F0BF1D97B3AF004C0994 /* QuestionMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionMapper.swift; sourceTree = "<group>"; };
+		7B81F0C11D97C125004C0994 /* AnswerMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerMapper.swift; sourceTree = "<group>"; };
 		C2BF938667C3ADCE7BF08E07 /* Pods_FinancialFitness.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinancialFitness.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4FFD1B775EB8EC5A911343 /* Pods-FinancialFitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialFitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialFitness/Pods-FinancialFitness.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +130,7 @@
 		7599686E1D97669200819396 /* FinancialFitness */ = {
 			isa = PBXGroup;
 			children = (
+				7B81F0BE1D97B3A4004C0994 /* Mapper */,
 				7B81F0B31D979C8F004C0994 /* Model */,
 				75DC025B1D978BB700D5F00E /* View */,
 				7B81F0B01D9781C9004C0994 /* Util */,
@@ -276,6 +281,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		7B81F0BE1D97B3A4004C0994 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				7B81F0BF1D97B3AF004C0994 /* QuestionMapper.swift */,
+				7B81F0C11D97C125004C0994 /* AnswerMapper.swift */,
+			);
+			name = Mapper;
+			sourceTree = "<group>";
+		};
 		FD00CF92BF1A1DC94F820944 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,7 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7599687E1D97669200819396 /* Build configuration list for PBXNativeTarget "FinancialFitness" */;
 			buildPhases = (
-				CC0F3A2EC26F9176E4837D8D /* 📦 Check Pods Manifest.lock */,
+				CC0F3A2EC26F9176E4837D8D /* [CP] Check Pods Manifest.lock */,
 				1EDA2982C0D0F610F9270C4A /* [CP] Check Pods Manifest.lock */,
 				C4D2004DAA02E8E1E10E2326 /* [CP] Check Pods Manifest.lock */,
 				759968681D97669200819396 /* Sources */,
@@ -440,14 +454,14 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CC0F3A2EC26F9176E4837D8D /* 📦 Check Pods Manifest.lock */ = {
+		CC0F3A2EC26F9176E4837D8D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +501,7 @@
 				75CF1C241D976A8C00147415 /* LoginViewController.swift in Sources */,
 				7B81F0BB1D979F9D004C0994 /* Resource.swift in Sources */,
 				759968851D97678E00819396 /* ForceClient.swift in Sources */,
+				7B81F0C01D97B3AF004C0994 /* QuestionMapper.swift in Sources */,
 				75CF1C281D976BA600147415 /* QuestionViewController.swift in Sources */,
 				7B81F0B91D979F0E004C0994 /* User.swift in Sources */,
 				75CF1C2E1D97741C00147415 /* ResourceTipsViewController.swift in Sources */,
@@ -495,6 +510,7 @@
 				759968721D97669200819396 /* ViewController.swift in Sources */,
 				759968701D97669200819396 /* AppDelegate.swift in Sources */,
 				75CF1C2C1D9773F100147415 /* ResourceVedioViewController.swift in Sources */,
+				7B81F0C21D97C125004C0994 /* AnswerMapper.swift in Sources */,
 				7B81F0B71D979E33004C0994 /* Answer.swift in Sources */,
 				75CF1C391D97793100147415 /* ResourceServicesAboutViewController.swift in Sources */,
 				75CF1C3F1D97797200147415 /* ResouceTipsAboutViewController.swift in Sources */,
