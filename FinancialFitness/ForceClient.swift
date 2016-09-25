@@ -57,11 +57,6 @@ class ForceClient: NSObject {
                 print(response)
                 if (response.result.isSuccess) {
                     let responseDictionary = response.result.value as! NSDictionary
-//                    let records = responseDictionary["records"] as! [NSDictionary]
-//                    print(records[0]["Name"]!)
-//                    if let JSON = response.result.value {
-//                        print("JSON: \(JSON)")
-//                    }
                     completion(questions: self.questionMapper.toQuestions(responseDictionary), error: nil)
                 } else {
                     completion(questions: nil, error: response.result.error)
@@ -79,12 +74,6 @@ class ForceClient: NSObject {
                 print(response)
                 if (response.result.isSuccess) {
                     let responseDictionary = response.result.value as! NSDictionary
-                    //                    let records = responseDictionary["records"] as! [NSDictionary]
-                    //                    print(records[0]["Name"]!)
-                    //                    if let JSON = response.result.value {
-                    //                        print("JSON: \(JSON)")
-                    //                    }
-                    
                     completion(answers: self.answerMapper.toAnswers(responseDictionary), error : nil)
                 } else {
                     completion(answers: nil, error: response.result.error)

@@ -15,6 +15,7 @@
 		7599687A1D97669200819396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759968781D97669200819396 /* LaunchScreen.storyboard */; };
 		759968851D97678E00819396 /* ForceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759968841D97678E00819396 /* ForceClient.swift */; };
 		75C8EBEC1D97918400D148BA /* ResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */; };
+		75C8EBEE1D97AD1200D148BA /* ResourceRelatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBED1D97AD1200D148BA /* ResourceRelatedViewController.swift */; };
 		75CF1C241D976A8C00147415 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C231D976A8C00147415 /* LoginViewController.swift */; };
 		75CF1C261D976AF000147415 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C251D976AF000147415 /* SignUpViewController.swift */; };
 		75CF1C281D976BA600147415 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF1C271D976BA600147415 /* QuestionViewController.swift */; };
@@ -56,6 +57,7 @@
 		7599687B1D97669200819396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759968841D97678E00819396 /* ForceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceClient.swift; sourceTree = "<group>"; };
 		75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesTableViewCell.swift; sourceTree = "<group>"; };
+		75C8EBED1D97AD1200D148BA /* ResourceRelatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceRelatedViewController.swift; sourceTree = "<group>"; };
 		75CF1C231D976A8C00147415 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		75CF1C251D976AF000147415 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		75CF1C271D976BA600147415 /* QuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		75CF1C2F1D97743D00147415 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				75C8EBED1D97AD1200D148BA /* ResourceRelatedViewController.swift */,
 				75CF1C291D9773D800147415 /* ResourceViewController.swift */,
 				75CF1C341D9774DF00147415 /* Services */,
 				75CF1C331D9774D800147415 /* Tips */,
@@ -302,6 +305,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7599687E1D97669200819396 /* Build configuration list for PBXNativeTarget "FinancialFitness" */;
 			buildPhases = (
+				CC0F3A2EC26F9176E4837D8D /* [CP] Check Pods Manifest.lock */,
 				1EDA2982C0D0F610F9270C4A /* [CP] Check Pods Manifest.lock */,
 				C4D2004DAA02E8E1E10E2326 /* [CP] Check Pods Manifest.lock */,
 				759968681D97669200819396 /* Sources */,
@@ -450,6 +454,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		CC0F3A2EC26F9176E4837D8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		F811856AEACC1342B59F4B7D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +491,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C8EBEE1D97AD1200D148BA /* ResourceRelatedViewController.swift in Sources */,
 				75C8EBEC1D97918400D148BA /* ResourcesTableViewCell.swift in Sources */,
 				75CF1C3B1D97794300147415 /* ResourceServicesNearViewController.swift in Sources */,
 				75CF1C411D97798400147415 /* ResouceTipsRelatedViewController.swift in Sources */,
