@@ -14,6 +14,8 @@
 		759968771D97669200819396 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 759968761D97669200819396 /* Assets.xcassets */; };
 		7599687A1D97669200819396 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759968781D97669200819396 /* LaunchScreen.storyboard */; };
 		759968851D97678E00819396 /* ForceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759968841D97678E00819396 /* ForceClient.swift */; };
+		75B279301D98637A00706C69 /* GSRoundedCornerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B2792F1D98637A00706C69 /* GSRoundedCornerLabel.swift */; };
+		75B279321D9863D300706C69 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B279311D9863D300706C69 /* Extensions.swift */; };
 		75C8EBEC1D97918400D148BA /* ResourcesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */; };
 		75C8EBEE1D97AD1200D148BA /* ResourceRelatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBED1D97AD1200D148BA /* ResourceRelatedViewController.swift */; };
 		75C8EBF01D97EEDB00D148BA /* GSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C8EBEF1D97EEDB00D148BA /* GSTextField.swift */; };
@@ -59,6 +61,8 @@
 		759968791D97669200819396 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7599687B1D97669200819396 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759968841D97678E00819396 /* ForceClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceClient.swift; sourceTree = "<group>"; };
+		75B2792F1D98637A00706C69 /* GSRoundedCornerLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSRoundedCornerLabel.swift; sourceTree = "<group>"; };
+		75B279311D9863D300706C69 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourcesTableViewCell.swift; sourceTree = "<group>"; };
 		75C8EBED1D97AD1200D148BA /* ResourceRelatedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceRelatedViewController.swift; sourceTree = "<group>"; };
 		75C8EBEF1D97EEDB00D148BA /* GSTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GSTextField.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				75C8EBEF1D97EEDB00D148BA /* GSTextField.swift */,
+				75B2792F1D98637A00706C69 /* GSRoundedCornerLabel.swift */,
 				75C8EBEB1D97918400D148BA /* ResourcesTableViewCell.swift */,
 			);
 			name = View;
@@ -271,6 +276,7 @@
 		7B81F0B01D9781C9004C0994 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				75B279311D9863D300706C69 /* Extensions.swift */,
 				7B81F0B11D9781DA004C0994 /* Constants.swift */,
 			);
 			name = Util;
@@ -569,10 +575,12 @@
 				7B66AE7A1D97D174008E8B5E /* AnswerResourceMapper.swift in Sources */,
 				759968721D97669200819396 /* ViewController.swift in Sources */,
 				759968701D97669200819396 /* AppDelegate.swift in Sources */,
+				75B279301D98637A00706C69 /* GSRoundedCornerLabel.swift in Sources */,
 				75CF1C2C1D9773F100147415 /* ResourceVedioViewController.swift in Sources */,
 				7B81F0C21D97C125004C0994 /* AnswerMapper.swift in Sources */,
 				7B81F0B71D979E33004C0994 /* Answer.swift in Sources */,
 				75C8EBF01D97EEDB00D148BA /* GSTextField.swift in Sources */,
+				75B279321D9863D300706C69 /* Extensions.swift in Sources */,
 				75CF1C391D97793100147415 /* ResourceServicesAboutViewController.swift in Sources */,
 				75CF1C3F1D97797200147415 /* ResouceTipsAboutViewController.swift in Sources */,
 				75CF1C311D97748300147415 /* ResourceServicesViewController.swift in Sources */,

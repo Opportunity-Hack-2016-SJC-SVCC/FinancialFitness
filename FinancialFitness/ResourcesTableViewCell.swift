@@ -10,7 +10,7 @@ import UIKit
 
 class ResourcesTableViewCell: UITableViewCell {
     
-    @IBOutlet var resourceTypeLabel : UILabel!
+//    @IBOutlet var resourceTypeLabel : UILabel!
     @IBOutlet var resourceDescriptionlabel : UILabel!
 
     override func awakeFromNib() {
