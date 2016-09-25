@@ -18,12 +18,13 @@ class ForceClient: NSObject {
     var questionMapper : QuestionMapper = QuestionMapper()
     var answerMapper : AnswerMapper = AnswerMapper()
     var answerResourceMapper : AnswerResourceMapper = AnswerResourceMapper()
+    var resourceMapper : ResourceMapper = ResourceMapper()
     
     func createRequest() -> NSMutableURLRequest {
         let request = NSMutableURLRequest()
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("Bearer 00D41000000GYQ7!AQ8AQG0xVv6sZUnwqJfLZitvpJWzuY4pdxALU0pMlkZZLpM9.uYoKc5l5BvazfRF7ZfA62XV.aSxXu0XM5RsPKjV4r8i8K.4", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer 00D41000000GYQ7!AQ8AQGdbg_ONWA00KiWmLL6qYzLxqV5ixnF7rM4FtICEhpKkzTLUbl2jWRAGDH.jDOQ.m6D.FlZ1NmWPe7BR7Xnc029JFZGd", forHTTPHeaderField: "Authorization")
         return request
     }
 
@@ -124,4 +125,21 @@ class ForceClient: NSObject {
         }
     }
     
+    //===================== Resource =========================
+    func getResourceById(resourceId : String, completion : (resource : Resource?, error : NSError?) -> Void) {
+        let urlString = "https://na35.salesforce.com/services/data/v37.0/sobjects/Fin_Fit_Resource__c/\(resourceId)"
+        let request = createRequest()
+        request.URL = createUrl(urlString)
+        Alamofire.request(request).responseJSON { (response) -> Void in
+            if((response.result.value) != nil) {
+                print(response)
+                if (response.result.isSuccess) {
+                    let responseDictionary = response.result.value as! NSDictionary
+                    completion(resource : self.resourceMapper.toResource(responseDictionary), error : nil)
+                } else {
+                    completion(resource: nil, error: response.result.error)
+                }
+            }
+        }
+    }
 }

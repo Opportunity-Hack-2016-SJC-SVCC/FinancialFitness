@@ -13,6 +13,7 @@ class ResourceViewController: UIViewController {
     @IBOutlet var resourceTableView : UITableView!
 
     var answerResources : [AnswerResource]?
+    let forceClient : ForceClient = ForceClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +37,24 @@ class ResourceViewController: UIViewController {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        print("selected ... \(indexPath.row)")
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let answerResource = answerResources![indexPath.row]
+        let resourceType = answerResource.resourceType
+        forceClient.getResourceById(answerResource.resourceCustomId!) { (resource, error) in
+            if (resourceType == "Fin Ed Video") {
+                self.performSegueWithIdentifier(Constants.RESOURCE_VEDIO_SEGUE, sender: resource)
+            }
+        }
     }
 
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // no-op
+        let segueIdentifier = segue.identifier
+        let resource = sender as? Resource
+        if (segueIdentifier == Constants.RESOURCE_VEDIO_SEGUE) {
+            let resourceVedioViewController = segue.destinationViewController as! ResourceVedioViewController
+            resourceVedioViewController.resource = resource
+        }
+    }
 }
