@@ -28,6 +28,11 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         optionsTableView.layer.borderWidth = 0.5;
         optionsTableView.layer.borderColor = UIColor.lightGrayColor().CGColor
         optionsTableView.layer.cornerRadius = 15
+        
+        questionTextView.layer.borderWidth = 0.5;
+        questionTextView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        questionTextView.layer.cornerRadius = 15
+        
         forceClient.getAllQuestions { (questions, error) in
             if error == nil {
             self.questions = questions
