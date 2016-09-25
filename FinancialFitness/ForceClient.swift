@@ -17,6 +17,7 @@ class ForceClient: NSObject {
 
     var questionMapper : QuestionMapper = QuestionMapper()
     var answerMapper : AnswerMapper = AnswerMapper()
+    var answerResourceMapper : AnswerResourceMapper = AnswerResourceMapper()
     
     func createRequest() -> NSMutableURLRequest {
         let request = NSMutableURLRequest()
@@ -65,6 +66,7 @@ class ForceClient: NSObject {
         }
     }
     
+    //===================== Answers =========================
     func getAnswersByQuestionId(questionCustomId : String, completion : (answers : [Answer]?, error : NSError?) -> Void) {
         let urlString = "https://na35.salesforce.com/services/data/v37.0/query/?q=Select+Id,IsDeleted,Name,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,Answer__c,Language__c+FROM+Language_Answer__c+WHERE+Answer__r.Question__c='\(questionCustomId)'+and+Language__c=+'English'+ORDER+BY+Answer__r.Order__c"
         let request = createRequest()
@@ -82,6 +84,47 @@ class ForceClient: NSObject {
         }
     }
     
+    //===================== Answer Resources =========================
+    
+    func getAnswerResourcesByAnswerIds(answerIds : [String], completion : (answerResources : [AnswerResource]?, error : NSError?) -> Void) {
+        let answerIdsDelimited = "'" + answerIds.joinWithSeparator("','") + "'"
+        let urlString = "https://na35.salesforce.com/services/data/v37.0/query/?q=Select+Id,IsDeleted,Name,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,Resource__r.RecordType.Name,Resource__c,Answer__c+from+Fin_Fit_Answer_Resource__c+where+Answer__c+in+(\(answerIdsDelimited))"
+        let request = createRequest()
+        request.URL = createUrl(urlString)
+        Alamofire.request(request).responseJSON { (response) -> Void in
+            if((response.result.value) != nil) {
+                print(response)
+                if (response.result.isSuccess) {
+                    let responseDictionary = response.result.value as! NSDictionary
+                    completion(answerResources : self.answerResourceMapper.toAnswerResources(responseDictionary), error : nil)
+                } else {
+                    completion(answerResources: nil, error: response.result.error)
+                }
+            }
+        }
+    }
+    
+    //===================== Answer Questions =========================
+    
+    func getQuestionsByAnswerIds(answerIds : [String], completion : (questions : [Question]?, error : NSError?) -> Void) {
+        let answerIdsDelimited = "'" + answerIds.joinWithSeparator("','") + "'"
+        let urlString = "https://na35.salesforce.com/services/data/v37.0/query/?q=Select+Id,IsDeleted,Question__r.Max_Answers_to_Select__c,Question__r.Min_Answers_to_Select__c,Name,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,Question__c,Language__c+FROM+Language_Question__c+WHERE+Question__r.Parent_Answer__c+in+(\(answerIdsDelimited))+and+Language__c=+'English'+ORDER+BY+Question__r.Order__c"
+        let request = createRequest()
+        request.URL = createUrl(urlString)
+        Alamofire.request(request).responseJSON { (response) -> Void in
+            if((response.result.value) != nil) {
+                print(response)
+                if (response.result.isSuccess) {
+                    let responseDictionary = response.result.value as! NSDictionary
+                    completion(questions : self.questionMapper.toQuestions(responseDictionary), error : nil)
+                } else {
+                    completion(questions: nil, error: response.result.error)
+                }
+            }
+        }
+    }
+    
+    //===================== Login & SignUp =========================
     
     func signUpUserWithparameters(signUpparameters : NSDictionary, completion : (response : AnyObject?, error : NSError?) -> Void) {
         
@@ -90,7 +133,7 @@ class ForceClient: NSObject {
         request.URL = createUrl(urlString)
         request.HTTPMethod = "POST"
         let jsonData = try! NSJSONSerialization.dataWithJSONObject(signUpparameters, options:[])
-
+        
         request.HTTPBody = jsonData
         
         Alamofire.request(request).responseJSON { (response) -> Void in
@@ -113,7 +156,7 @@ class ForceClient: NSObject {
         let request = createRequest()
         request.URL = createUrl(urlString)
         request.HTTPMethod = "GET"
-   
+        
         Alamofire.request(request).responseJSON { (response) -> Void in
             if((response.result.value) != nil) {
                 print(response)
@@ -127,4 +170,14 @@ class ForceClient: NSObject {
         }
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+
+
 }
