@@ -114,7 +114,7 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         alertController.addAction(defaultAction)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
-    
+
     private func removeAnswerSelection(answerId : String) {
         var currentIndex : Int = 0
         for selectedAnswer in selectedAnswers! {
@@ -133,4 +133,5 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         return answerIds
     }
+
 }
