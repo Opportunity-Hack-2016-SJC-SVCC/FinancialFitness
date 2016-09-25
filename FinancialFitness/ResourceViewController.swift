@@ -17,6 +17,11 @@ class ResourceViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.resourceTableView.layer.borderColor = UIColor.lightGrayColor().CGColor
+        self.resourceTableView.layer.borderWidth = 0.5
+        self.resourceTableView.layer.cornerRadius = 15
+        
+        self.title = "Resources"
 
         // Do any additional setup after loading the view.
     }
@@ -30,7 +35,7 @@ class ResourceViewController: UIViewController {
         
         let resourceTableViewCell = tableView.dequeueReusableCellWithIdentifier("ResourceTableViewCell") as! ResourcesTableViewCell
         let answerResource = answerResources![indexPath.row]
-        resourceTableViewCell.resourceTypeLabel.text = "Vedio"
+//        resourceTableViewCell.resourceTypeLabel.text = "Vedio"
         resourceTableViewCell.resourceDescriptionlabel.text = answerResource.answerResourceName
         return resourceTableViewCell;
         
@@ -47,6 +52,19 @@ class ResourceViewController: UIViewController {
             }
         }
     }
+    
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        
+//        let sectionLabel = GSRoundedCornerLabel()
+//        
+//        sectionLabel.text = "Resources"
+//        
+//        sectionLabel.textColor = UIColor.whiteColor()
+//        sectionLabel.backgroundColor = UIColor(netHex : 0x7c8590)
+//        sectionLabel.textAlignment = NSTextAlignment.Center
+//        
+//        return sectionLabel
+//    }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // no-op

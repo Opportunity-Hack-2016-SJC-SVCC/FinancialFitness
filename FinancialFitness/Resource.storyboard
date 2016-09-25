@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RZo-32-ubW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="RZo-32-ubW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Resource View Controller-->
@@ -17,46 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-Yx-Xjy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="47" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-Yx-Xjy">
                                 <rect key="frame" x="20" y="28" width="280" height="520"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResourceTableViewCell" id="hBe-ZV-DSz" customClass="ResourcesTableViewCell" customModule="FinancialFitness" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="280" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResourceTableViewCell" rowHeight="47" id="hBe-ZV-DSz" customClass="ResourcesTableViewCell" customModule="FinancialFitness" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="280" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hBe-ZV-DSz" id="dOd-qX-BZl">
-                                            <rect key="frame" x="0.0" y="0.0" width="280" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="280" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkc-Mj-ufr">
-                                                    <rect key="frame" x="8" y="11" width="75" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="75" id="pGO-7d-Uxc"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcb-bS-5cS">
                                                     <rect key="frame" x="112" y="11" width="160" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="video-icon" translatesAutoresizingMaskIntoConstraints="NO" id="yOy-rP-1Ca">
+                                                    <rect key="frame" x="16" y="6" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="DSf-HT-iC6"/>
+                                                        <constraint firstAttribute="height" constant="32" id="PfA-yl-DeK"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="yOy-rP-1Ca" firstAttribute="top" secondItem="dOd-qX-BZl" secondAttribute="topMargin" id="CDu-K2-hTQ"/>
                                                 <constraint firstItem="hcb-bS-5cS" firstAttribute="top" secondItem="dOd-qX-BZl" secondAttribute="top" constant="10" id="Gcq-Ns-NaJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="hcb-bS-5cS" secondAttribute="bottom" constant="10" id="HW6-Dg-aNB"/>
                                                 <constraint firstAttribute="trailing" secondItem="hcb-bS-5cS" secondAttribute="trailing" constant="8" id="ROA-bq-h8A"/>
-                                                <constraint firstAttribute="bottom" secondItem="fkc-Mj-ufr" secondAttribute="bottom" constant="10" id="nEq-e9-Dmk"/>
-                                                <constraint firstItem="fkc-Mj-ufr" firstAttribute="leading" secondItem="dOd-qX-BZl" secondAttribute="leading" constant="8" id="qCN-As-yxP"/>
-                                                <constraint firstItem="fkc-Mj-ufr" firstAttribute="top" secondItem="dOd-qX-BZl" secondAttribute="top" constant="10" id="rMd-Kh-b6O"/>
-                                                <constraint firstItem="hcb-bS-5cS" firstAttribute="leading" secondItem="fkc-Mj-ufr" secondAttribute="trailing" constant="29" id="yxm-5V-nUs"/>
+                                                <constraint firstItem="yOy-rP-1Ca" firstAttribute="leading" secondItem="dOd-qX-BZl" secondAttribute="leadingMargin" constant="8" id="Xm8-m6-lk8"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="resourceDescriptionlabel" destination="hcb-bS-5cS" id="GnZ-bi-7Q0"/>
-                                            <outlet property="resourceTypeLabel" destination="fkc-Mj-ufr" id="3qQ-i5-zNs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -73,8 +69,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3j7-LY-bJc" firstAttribute="top" secondItem="r5z-Yx-Xjy" secondAttribute="bottom" constant="20" id="4MF-to-Lrw"/>
+                            <constraint firstItem="r5z-Yx-Xjy" firstAttribute="leading" secondItem="wom-yb-PNa" secondAttribute="leading" constant="20" id="CoX-Wm-L0J"/>
+                            <constraint firstItem="r5z-Yx-Xjy" firstAttribute="top" secondItem="3aY-fK-78f" secondAttribute="bottom" id="GBn-ge-6VK"/>
+                            <constraint firstAttribute="trailing" secondItem="r5z-Yx-Xjy" secondAttribute="trailing" constant="20" id="OS9-Pr-MdT"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="resourceTableView" destination="r5z-Yx-Xjy" id="dHW-Hl-bbB"/>
                         <segue destination="iZW-CI-tmS" kind="push" identifier="ResourceVedioSegue" id="yeP-Xk-aye"/>
                     </connections>
                 </viewController>
@@ -147,4 +150,7 @@
             <point key="canvasLocation" x="545" y="724"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="video-icon" width="32" height="32"/>
+    </resources>
 </document>
