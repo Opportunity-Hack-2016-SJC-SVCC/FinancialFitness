@@ -9,27 +9,36 @@
 import UIKit
 
 class ResourceTipsViewController: UIViewController {
+    
+    @IBOutlet var tipSegmentedControl : UISegmentedControl!
+    @IBOutlet var tipOptionsContainerView : UIView!
+    
+    var aboutTipResourceViewController : ResouceTipsAboutViewController?
+    var resourceTipsRelatedViewController : ResourceRelatedViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tipSegmentedControl.selectedSegmentIndex = 0;
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    @IBAction func segmentvalueChanged(sender: AnyObject) {
+        
+        let storyboard = UIStoryboard(name: "ResourceTips", bundle: nil)
+        
+        if sender.selectedSegmentIndex == 0 {
+            
+            self.aboutTipResourceViewController = storyboard.instantiateViewControllerWithIdentifier("ResouceTipsAboutViewController") as? ResouceTipsAboutViewController
+            
+            self.tipOptionsContainerView.addSubview((self.aboutTipResourceViewController?.view)!)
+            
+        } else if sender.selectedSegmentIndex == 1 {
+            
+            self.resourceTipsRelatedViewController = storyboard.instantiateViewControllerWithIdentifier("ResourceRelatedViewController") as? ResourceRelatedViewController
+            
+            self.tipOptionsContainerView.addSubview((self.resourceTipsRelatedViewController?.view)!)
+            
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
