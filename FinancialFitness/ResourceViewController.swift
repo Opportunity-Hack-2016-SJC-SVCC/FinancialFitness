@@ -21,18 +21,17 @@ class ResourceViewController: UIViewController {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return 1;
+        return (answerResources?.count)!
         
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var tableViewCell = tableView.dequeueReusableCellWithIdentifier("ResourceTableViewCell") as! ResourcesTableViewCell
-        tableViewCell.resourceTypeLabel.text = "ResourceType"
-        tableViewCell.resourceDescriptionlabel.text = "Resource Description"
-        
-        return tableViewCell;
+        let resourceTableViewCell = tableView.dequeueReusableCellWithIdentifier("ResourceTableViewCell") as! ResourcesTableViewCell
+        let answerResource = answerResources![indexPath.row]
+        resourceTableViewCell.resourceTypeLabel.text = "Vedio"
+        resourceTableViewCell.resourceDescriptionlabel.text = answerResource.answerResourceName
+        return resourceTableViewCell;
         
     }
     
