@@ -14,6 +14,8 @@ class ResourceVedioViewController: UIViewController {
     @IBOutlet var videoDescription : UITextView!
     @IBOutlet var userVideoNote : UITextView!
 
+    var resource : Resource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.playVideo("90lQxO3ARmY")

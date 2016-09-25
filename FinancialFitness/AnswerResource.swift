@@ -11,6 +11,7 @@ import UIKit
 class AnswerResource: NSObject {
 
     var answerResourceId : String?
+    var answerResourceName : String?
     var answerCustomId : String?
     var resourceCustomId : String?
     
