@@ -8,7 +8,11 @@
 
 import UIKit
 
-class QuestionViewController: UIViewController {
+class QuestionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet var questionTextView : UITextView!
+    @IBOutlet var optionsTableView : UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +20,31 @@ class QuestionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1;
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var tableViewCell = tableView.dequeueReusableCellWithIdentifier("QuestionOptionCell")
+        tableViewCell?.textLabel?.text = "Sample"
+        
+        return tableViewCell!;
+        
     }
-    */
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+    
+    
+    
+    
+  
+    
 
 }
