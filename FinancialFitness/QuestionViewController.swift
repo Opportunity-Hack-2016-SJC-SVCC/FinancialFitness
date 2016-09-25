@@ -15,7 +15,10 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var questions : [Question]? = []
     var answers : [Answer]? = []
+    var selectedAnswers : [Answer]? = []
+    
     var currentQuestionIndex : Int = 0
+    
     
     let forceClient : ForceClient = ForceClient()
     
@@ -46,19 +49,33 @@ class QuestionViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let tableViewCell = tableView.dequeueReusableCellWithIdentifier("QuestionOptionCell")
         tableViewCell?.textLabel?.text = answers![indexPath.row].answerName
+        tableViewCell!.accessoryType = .None
         return tableViewCell!;
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        print("selected ... \(indexPath.row)")
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let optionTableViewCell = tableView.cellForRowAtIndexPath(indexPath)
+        if (optionTableViewCell?.accessoryType == .Checkmark) {
+            optionTableViewCell!.accessoryType = .None
+            removeAnswerSelection(answers![indexPath.row].answerId!)
+        } else {
+            optionTableViewCell!.accessoryType = .Checkmark
+            selectedAnswers?.append(answers![indexPath.row])
+        }
     }
     
     
     
-    
-    
-  
-    
-
+    func removeAnswerSelection(answerId : String) {
+        var currentIndex : Int = 0
+        for selectedAnswer in selectedAnswers! {
+            if (selectedAnswer.answerId == answerId) {
+                selectedAnswers?.removeAtIndex(currentIndex)
+            }
+            currentIndex += 1
+        }
+    }
 }

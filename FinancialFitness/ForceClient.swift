@@ -17,6 +17,7 @@ class ForceClient: NSObject {
 
     var questionMapper : QuestionMapper = QuestionMapper()
     var answerMapper : AnswerMapper = AnswerMapper()
+    var answerResourceMapper : AnswerResourceMapper = AnswerResourceMapper()
     
     func createRequest() -> NSMutableURLRequest {
         let request = NSMutableURLRequest()
@@ -65,6 +66,7 @@ class ForceClient: NSObject {
         }
     }
     
+    //===================== Answers =========================
     func getAnswersByQuestionId(questionCustomId : String, completion : (answers : [Answer]?, error : NSError?) -> Void) {
         let urlString = "https://na35.salesforce.com/services/data/v37.0/query/?q=Select+Id,IsDeleted,Name,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,Answer__c,Language__c+FROM+Language_Answer__c+WHERE+Answer__r.Question__c='\(questionCustomId)'+and+Language__c=+'English'+ORDER+BY+Answer__r.Order__c"
         let request = createRequest()
@@ -77,6 +79,26 @@ class ForceClient: NSObject {
                     completion(answers: self.answerMapper.toAnswers(responseDictionary), error : nil)
                 } else {
                     completion(answers: nil, error: response.result.error)
+                }
+            }
+        }
+    }
+    
+    //===================== Answer Resource =========================
+    
+    func getResourcesByAnswerIds(answerIds : [String], completion : (resources : [AnswerResource]?, error : NSError?) -> Void) {
+        let answerIdsDelimited = answerIds.joinWithSeparator(",")
+        let urlString = "https://na35.salesforce.com/services/data/v37.0/query/?q=Select+Id,IsDeleted,Name,CreatedDate,CreatedById,LastModifiedDate,LastModifiedById,SystemModstamp,LastActivityDate,Resource__r.RecordType.Name,Resource__c,Answer__c+from+Fin_Fit_Answer_Resource__c+where+Answer__c+in+('\(answerIdsDelimited)')"
+        let request = createRequest()
+        request.URL = createUrl(urlString)
+        Alamofire.request(request).responseJSON { (response) -> Void in
+            if((response.result.value) != nil) {
+                print(response)
+                if (response.result.isSuccess) {
+                    let responseDictionary = response.result.value as! NSDictionary
+                    completion(resources : self.answerResourceMapper.toAnswerResources(responseDictionary), error : nil)
+                } else {
+                    completion(resources: nil, error: response.result.error)
                 }
             }
         }
