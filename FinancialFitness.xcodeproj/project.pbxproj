@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751073401D977DF600E2277F /* Signup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7510733F1D977DF600E2277F /* Signup.storyboard */; };
 		759968701D97669200819396 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7599686F1D97669200819396 /* AppDelegate.swift */; };
 		759968721D97669200819396 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759968711D97669200819396 /* ViewController.swift */; };
 		759968751D97669200819396 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759968731D97669200819396 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		10D1E16734AA431F4FCE3E0D /* Pods-FinancialFitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinancialFitness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinancialFitness/Pods-FinancialFitness.debug.xcconfig"; sourceTree = "<group>"; };
+		7510733F1D977DF600E2277F /* Signup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signup.storyboard; sourceTree = "<group>"; };
 		7599686C1D97669200819396 /* FinancialFitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinancialFitness.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7599686F1D97669200819396 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		759968711D97669200819396 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		759968821D9766BD00819396 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				7510733F1D977DF600E2277F /* Signup.storyboard */,
 			);
 			name = Storyboard;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			files = (
 				7599687A1D97669200819396 /* LaunchScreen.storyboard in Resources */,
 				759968771D97669200819396 /* Assets.xcassets in Resources */,
+				751073401D977DF600E2277F /* Signup.storyboard in Resources */,
 				759968751D97669200819396 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
