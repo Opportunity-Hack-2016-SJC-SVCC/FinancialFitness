@@ -11,7 +11,7 @@ import Alamofire
 
 let baseForceUrl = "https://na35.salesforce.com/services/data/v37.0/sobjects/"
 
-let accessToken = "Bearer 00D41000000GYQ7!AQ8AQG0xVv6sZUnwqJfLZitvpJWzuY4pdxALU0pMlkZZLpM9.uYoKc5l5BvazfRF7ZfA62XV.aSxXu0XM5RsPKjV4r8i8K.4"
+let accessToken = "Bearer 00D41000000GYQ7!AQ8AQGdbg_ONWA00KiWmLL6qYzLxqV5ixnF7rM4FtICEhpKkzTLUbl2jWRAGDH.jDOQ.m6D.FlZ1NmWPe7BR7Xnc029JFZGd"
 
 class ForceClient: NSObject {
 
@@ -23,7 +23,7 @@ class ForceClient: NSObject {
         let request = NSMutableURLRequest()
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("application/json", forHTTPHeaderField: "Accept")
-        request.setValue("Bearer 00D41000000GYQ7!AQ8AQG0xVv6sZUnwqJfLZitvpJWzuY4pdxALU0pMlkZZLpM9.uYoKc5l5BvazfRF7ZfA62XV.aSxXu0XM5RsPKjV4r8i8K.4", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer AQ8AQGdbg_ONWA00KiWmLL6qYzLxqV5ixnF7rM4FtICEhpKkzTLUbl2jWRAGDH.jDOQ.m6D.FlZ1NmWPe7BR7Xnc029JFZGd", forHTTPHeaderField: "Authorization")
         return request
     }
 
@@ -124,4 +124,60 @@ class ForceClient: NSObject {
         }
     }
     
+    //===================== Login & SignUp =========================
+    
+    func signUpUserWithparameters(signUpparameters : NSDictionary, completion : (response : AnyObject?, error : NSError?) -> Void) {
+        
+        let urlString = "https://na35.salesforce.com/services/data/v37.0/sobjects/Contact/"
+        let request = createRequest()
+        request.URL = createUrl(urlString)
+        request.HTTPMethod = "POST"
+        let jsonData = try! NSJSONSerialization.dataWithJSONObject(signUpparameters, options:[])
+        
+        request.HTTPBody = jsonData
+        
+        Alamofire.request(request).responseJSON { (response) -> Void in
+            if((response.result.value) != nil) {
+                print(response)
+                if (response.result.isSuccess) {
+                    let responseDictionary = response.result.value as! NSDictionary
+                    completion(response: "Success", error : nil)
+                } else {
+                    completion(response: nil, error: response.result.error)
+                }
+            }
+        }
+        
+    }
+    
+    func validateLogin(userEmailId : String, completion : (response : AnyObject?, error : NSError?) -> Void){
+        
+        let urlString = "https://na35.salesforce.com/services/data/v37.0/query/?q=SELECT+email+from+contact+where+email='\(userEmailId)'"
+        let request = createRequest()
+        request.URL = createUrl(urlString)
+        request.HTTPMethod = "GET"
+        
+        Alamofire.request(request).responseJSON { (response) -> Void in
+            if((response.result.value) != nil) {
+                print(response)
+                if (response.result.isSuccess) {
+                    let responseDictionary = response.result.value as! NSDictionary
+                    completion(response: self.answerMapper.userDetails(responseDictionary), error : nil)
+                } else {
+                    completion(response: nil, error: response.result.error)
+                }
+            }
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+
+
 }

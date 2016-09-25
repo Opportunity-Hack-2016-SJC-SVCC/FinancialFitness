@@ -26,6 +26,17 @@ class AnswerMapper: NSObject {
         answer.answerCustomId = answerDictionary["Answer__c"] as? String
         return answer
     }
-
+    
+    func userDetails(userDictionary : NSDictionary) -> String {
+        
+        let users = userDictionary["records"] as? NSArray
+        
+        if users?.count > 0 {
+           return "Success"
+        } else {
+            return "Failure"
+        }
+    }
+    
     
 }
