@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Resource View Controller-->
+        <scene sceneID="bub-GE-Lgc">
+            <objects>
+                <viewController storyboardIdentifier="ResourceViewController" id="RZo-32-ubW" customClass="ResourceViewController" customModule="FinancialFitness" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3aY-fK-78f"/>
+                        <viewControllerLayoutGuide type="bottom" id="3j7-LY-bJc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wom-yb-PNa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="iZW-CI-tmS" kind="push" identifier="ResourceVedioSegue" id="yeP-Xk-aye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jya-kv-djm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="165.33333333333334" y="230.98666666666665"/>
+        </scene>
+        <!--ResourceVedioViewController-->
+        <scene sceneID="awE-Em-Sf5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ResourceVedio" referencedIdentifier="ResourceVedioViewController" id="iZW-CI-tmS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MKW-VN-G2v"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z2t-6N-vUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="20"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="Qmq-o7-K9w">
+            <objects>
+                <viewControllerPlaceholder id="GGK-9O-fOm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U9A-r7-8aI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648.5" y="151"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="yUE-Hq-mah">
+            <objects>
+                <viewControllerPlaceholder id="u7l-NJ-C5l" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J0i-50-k9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622.5" y="346"/>
+        </scene>
+    </scenes>
+</document>
